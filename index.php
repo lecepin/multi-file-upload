@@ -100,16 +100,15 @@
 
   function get_local_ip()
   {
-    $preg = "/\A((([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\.){3}(([0-9]?[0-9])|(1[0-9]{2})|(2[0-4][0-9])|(25[0-5]))\Z/";
-
     exec("ipconfig", $out, $stats);
 
     if (!empty($out)) {
       for ($i = 0; $i < count($out); $i++) {
-        $startPos = strpos($out[$i], "inet ");
+        $startPos = strpos($out[$i], "IPv4 ");
 
-        if ($startPos && !strpos($out[$i], "inet 127")) {
-          return substr($out[$i], $startPos + 5, strpos($out[$i], " netmask") - ($startPos + 5));
+        if ($startPos) {
+          $startPos = strpos($out[$i], ": ");
+          return substr($out[$i], $startPos + 2, strlen($out[$i]) - ($startPos + 2));
         }
       }
     }
