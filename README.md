@@ -1,5 +1,5 @@
 ```
-php -c ./ -S localhost:8888
+php -c ./ -S localhost:8000
 ```
 
 <img width="50%" src="https://user-images.githubusercontent.com/11046969/114578931-f5ae9000-9caf-11eb-8ad0-ec498f10c957.png" />
