@@ -39,8 +39,11 @@
       </div>
     </form>
 
-    <div id="qrcode" style="margin-top: 15px;"></div>
+    <div id="qrcode" style="margin: 15px 0;"></div>
 
+    <button type="button" class="btn btn-success" onclick="javascript:window.location.href='new/'">
+      JQ 版 <span class="badge rounded-pill bg-warning">New</span>
+    </button>
   <?php
   }
 
