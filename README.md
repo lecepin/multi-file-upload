@@ -63,3 +63,12 @@ Press Ctrl-C to quit.
 对于需要提供给手机端进行下载的文件，也可以直接放到 `Upload` 目录中，会在 `已下载` 页面呈现。
 
 > `Upload` 文件夹会在上传文件操作中自动创建。
+
+---
+### JQ 版本
+
+当在传输大文件时，上传的进度状态是很有必要的，这里使用 [jQuery-File-Upload](https://github.com/blueimp/jQuery-File-Upload) 库来实现上传进度显示。
+
+<img width="500" src="https://img.alicdn.com/imgextra/i1/O1CN01i2xK2N1DH3vLfIjNk_!!6000000000190-2-tps-1196-750.png" />
+
+<img width="500" src="https://img.alicdn.com/imgextra/i1/O1CN01DLJZuL1j7xlO16Yzl_!!6000000004502-2-tps-1522-870.png" />
