@@ -5,7 +5,10 @@ for /f "tokens=4" %%a in ('route print^|findstr 0.0.0.0.*0.0.0.0') do (
 )
 
 :: 将网址进行复制
-echo http://%IP%:8000 |clip 
+:: echo http://%IP%:8000 |clip 
+
+:: 打开网页
+start http://%IP%:8000
 
 :: 启动服务
 php -c ./ -S %IP%:8000
